@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://www.springframework.org/tags" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +13,6 @@
 </p>
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-<script src = ../js/crawler.js></script>
+<script src = "<c:url value="/resources/crawler.js" />"></script>
 </body>
 </html>

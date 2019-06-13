@@ -13,13 +13,10 @@ import java.util.List;
 
 @Service
 public class CrawlService {
-    private static Logger logger = LoggerFactory.getLogger(CrawlService.class);
 
     public Metadata getMetadata(String url) throws IOException {
-        logger.info("Getting metadata for url :" + url);
         int issuesIn24hrs = 0, issuesInLessThan7Days = 0, issuesInMoreThan7Days = 0, flag = 0;
         int totalPages = CrawlerUtils.getTotalPages(url, "Mozilla/5.0", 0);
-
         for(int i = 0; i < totalPages; i++){
             if(flag == 1){
                 issuesInMoreThan7Days += CrawlerUtils.getRemainingIssuesGreaterThan7Days(i, totalPages, CrawlerUtils.getUrlForPage(url, i + 1), "Mozilla/5.0", 0);

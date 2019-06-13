@@ -15,7 +15,7 @@ public class CrawlController {
     @Autowired
     private CrawlService crawlService;
 
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET, produces = "application/json; charset=utf-8")
     public @ResponseBody
     Metadata getMetadata(@RequestParam String url) throws IOException {
         return crawlService.getMetadata(url+"/issues");
