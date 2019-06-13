@@ -17,3 +17,4 @@ Improvements-
 2) Exception Handling. Exceptions could not be handled with proper error messages.
 3) Web scraping also has issues from scalibility point of view since each website has limiting number of requests for a period of time
 4) UI could be improved a bit 
+5) Logging could be used more extensively
